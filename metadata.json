@@ -1,0 +1,5 @@
+{
+  "name": "TraceMaster PCB Calculator",
+  "description": "An advanced IPC-2221 compliant PCB trace width calculator with real-time visualization, interactive charts, and an AI engineering assistant.",
+  "requestFramePermissions": []
+}
