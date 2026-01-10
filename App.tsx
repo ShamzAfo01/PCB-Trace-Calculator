@@ -126,7 +126,7 @@ const App: React.FC = () => {
                 <p className="text-slate-400 text-xl font-medium max-w-2xl mx-auto">Input the current demand to calculate the minimum copper width required for thermal safety.</p>
               </div>
 
-              <div className="bg-white p-12 md:p-16 rounded-[4rem] border border-slate-100 shadow-2xl shadow-slate-200/40 space-y-16 relative overflow-hidden">
+              <div className="bg-white p-12 md:p-16 rounded-[12px] border border-slate-100 shadow-2xl shadow-slate-200/40 space-y-16 relative overflow-hidden">
                 <div className="space-y-12 relative">
                   <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                     <div className="flex items-center gap-4">
@@ -184,7 +184,7 @@ const App: React.FC = () => {
                       <button
                         key={t}
                         onClick={() => setInputs({...inputs, tempRise: t})}
-                        className={`relative py-6 rounded-3xl border-2 text-sm font-black transition-all ${
+                        className={`relative py-6 rounded-[12px] border-2 text-sm font-black transition-all ${
                           inputs.tempRise === t 
                           ? "bg-primary border-primary text-white shadow-xl shadow-primary/30 scale-105" 
                           : "bg-white text-slate-500 border-slate-100 hover:border-primary/20"
@@ -199,7 +199,7 @@ const App: React.FC = () => {
 
               <button 
                 onClick={nextStep}
-                className="w-full bg-primary text-white py-8 rounded-[2.5rem] font-black text-2xl hover:shadow-2xl hover:shadow-primary/40 transition-all flex items-center justify-center gap-6 group active:scale-[0.98]"
+                className="w-full bg-primary text-white py-8 rounded-[12px] font-black text-2xl hover:shadow-2xl hover:shadow-primary/40 transition-all flex items-center justify-center gap-6 group active:scale-[0.98]"
               >
                 Physical Specification <ChevronRight className="w-8 h-8 group-hover:translate-x-3 transition-transform" />
               </button>
@@ -214,7 +214,7 @@ const App: React.FC = () => {
                 <p className="text-slate-400 text-xl font-medium max-w-2xl mx-auto">Copper weight and layer placement significantly impact heat dissipation capabilities.</p>
               </div>
 
-              <div className="bg-white p-12 md:p-16 rounded-[4rem] border border-slate-100 shadow-2xl shadow-slate-200/40 space-y-16">
+              <div className="bg-white p-12 md:p-16 rounded-[12px] border border-slate-100 shadow-2xl shadow-slate-200/40 space-y-16">
                 <div className="grid md:grid-cols-2 gap-16">
                   <div className="space-y-10">
                     <div className="flex items-center gap-4">
@@ -231,7 +231,7 @@ const App: React.FC = () => {
                         <button
                           key={oz}
                           onClick={() => setInputs({...inputs, thicknessOz: oz})}
-                          className={`py-6 rounded-3xl border-2 text-sm font-black transition-all ${
+                          className={`py-6 rounded-[12px] border-2 text-sm font-black transition-all ${
                             inputs.thicknessOz === oz 
                             ? "bg-primary border-primary text-white shadow-xl shadow-primary/20 scale-105" 
                             : "bg-white text-slate-500 border-slate-100 hover:border-primary/20"
@@ -256,7 +256,7 @@ const App: React.FC = () => {
                     <div className="space-y-4">
                       <button
                         onClick={() => setInputs({...inputs, layer: LayerType.EXTERNAL})}
-                        className={`w-full p-6 rounded-3xl border-2 flex items-center justify-between transition-all group ${
+                        className={`w-full p-6 rounded-[12px] border-2 flex items-center justify-between transition-all group ${
                           inputs.layer === LayerType.EXTERNAL 
                           ? "bg-primary/5 border-primary text-primary" 
                           : "bg-white border-slate-100 text-slate-500 hover:border-primary/20"
@@ -272,7 +272,7 @@ const App: React.FC = () => {
                       </button>
                       <button
                         onClick={() => setInputs({...inputs, layer: LayerType.INTERNAL})}
-                        className={`w-full p-6 rounded-3xl border-2 flex items-center justify-between transition-all group ${
+                        className={`w-full p-6 rounded-[12px] border-2 flex items-center justify-between transition-all group ${
                           inputs.layer === LayerType.INTERNAL 
                           ? "bg-primary/5 border-primary text-primary" 
                           : "bg-white border-slate-100 text-slate-500 hover:border-primary/20"
@@ -294,13 +294,13 @@ const App: React.FC = () => {
               <div className="flex flex-col md:flex-row gap-6">
                 <button 
                   onClick={prevStep}
-                  className="flex-1 bg-slate-100 text-slate-500 py-8 rounded-[2.5rem] font-black text-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-4"
+                  className="flex-1 bg-slate-100 text-slate-500 py-8 rounded-[12px] font-black text-xl hover:bg-slate-200 transition-all flex items-center justify-center gap-4"
                 >
                   <ChevronLeft className="w-6 h-6" /> Previous
                 </button>
                 <button 
                   onClick={nextStep}
-                  className="flex-[2] bg-primary text-white py-8 rounded-[2.5rem] font-black text-2xl hover:shadow-2xl hover:shadow-primary/40 transition-all flex items-center justify-center gap-6 active:scale-[0.98]"
+                  className="flex-[2] bg-primary text-white py-8 rounded-[12px] font-black text-2xl hover:shadow-2xl hover:shadow-primary/40 transition-all flex items-center justify-center gap-6 active:scale-[0.98]"
                 >
                   Run Calculation <ChevronRight className="w-8 h-8" />
                 </button>
@@ -317,7 +317,7 @@ const App: React.FC = () => {
                 </div>
                 <button 
                   onClick={() => setStep(1)}
-                  className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-5 rounded-3xl font-black text-sm transition-all flex items-center gap-3 shadow-xl active:scale-95 mx-auto md:mx-0"
+                  className="bg-slate-900 hover:bg-slate-800 text-white px-8 py-5 rounded-[12px] font-black text-sm transition-all flex items-center gap-3 shadow-xl active:scale-95 mx-auto md:mx-0"
                 >
                   <RefreshCcw className="w-5 h-5" /> Calculate New Trace
                 </button>
@@ -325,7 +325,7 @@ const App: React.FC = () => {
 
               <div className="grid lg:grid-cols-12 gap-8">
                 {/* Result Card */}
-                <div className="lg:col-span-7 bg-primary p-12 md:p-16 rounded-[4rem] text-white shadow-[0_40px_80px_-20px_rgba(0,56,223,0.3)] relative overflow-hidden flex flex-col justify-between min-h-[400px]">
+                <div className="lg:col-span-7 bg-primary p-12 md:p-16 rounded-[12px] text-white shadow-[0_40px_80px_-20px_rgba(0,56,223,0.3)] relative overflow-hidden flex flex-col justify-between min-h-[400px]">
                   <div className="absolute -top-20 -right-20 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
                   
                   <div>
@@ -362,7 +362,7 @@ const App: React.FC = () => {
                 <ComparisonChart inputs={inputs} />
                 
                 {/* AI Section */}
-                <div className="bg-white rounded-[4rem] border border-slate-100 overflow-hidden shadow-2xl shadow-slate-100/50">
+                <div className="bg-white rounded-[12px] border border-slate-100 overflow-hidden shadow-2xl shadow-slate-100/50">
                   <div className="p-12 md:p-16 border-b border-slate-50 flex items-center justify-between flex-wrap gap-10">
                     <div className="flex items-center gap-8">
                       <div className="bg-purple-600 p-6 rounded-[2rem] shadow-2xl shadow-purple-600/30">
@@ -377,7 +377,7 @@ const App: React.FC = () => {
                       <button 
                         onClick={handleGetAdvice}
                         disabled={loadingAdvice}
-                        className="px-12 py-5 bg-primary text-white rounded-3xl font-black text-lg hover:bg-blue-700 transition-all disabled:opacity-50 active:scale-95 flex items-center gap-4 shadow-xl shadow-primary/20"
+                        className="px-12 py-5 bg-primary text-white rounded-[12px] font-black text-lg hover:bg-blue-700 transition-all disabled:opacity-50 active:scale-95 flex items-center gap-4 shadow-xl shadow-primary/20"
                       >
                         {loadingAdvice ? (
                           <>
